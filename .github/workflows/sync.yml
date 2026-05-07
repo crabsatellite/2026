@@ -1,0 +1,53 @@
+name: Sync from upstream (DoraWolf/2026)
+
+# Pulls new commits from the upstream repo (DoraWolf/2026) into this fork
+# every day, plus a manual trigger. The fork carries our own commits
+# (restructure + README) on top of upstream, so we use a regular merge
+# rather than a force-sync — that way our commits stay intact.
+#
+# If a merge conflict happens, the workflow fails so we know to handle it.
+
+on:
+  schedule:
+    - cron: "0 4 * * *"        # 04:00 UTC daily (≈ 12:00 Beijing)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout fork
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Merge upstream/master
+        env:
+          UPSTREAM: https://github.com/DoraWolf/2026.git
+          BRANCH: master
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote add upstream "$UPSTREAM"
+          git fetch upstream "$BRANCH"
+
+          # Already up-to-date?
+          if git merge-base --is-ancestor "upstream/$BRANCH" "HEAD"; then
+            echo "Fork is already up to date with upstream/$BRANCH."
+            exit 0
+          fi
+
+          # Try merging; if conflicts, abort and fail the workflow.
+          if ! git merge --no-edit "upstream/$BRANCH"; then
+            git merge --abort || true
+            echo "::error::Merge conflict from upstream/$BRANCH. Resolve manually."
+            exit 1
+          fi
+
+          git push origin "$BRANCH"
+          echo "Synced upstream/$BRANCH into $BRANCH."
