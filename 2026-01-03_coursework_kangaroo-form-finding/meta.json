@@ -5,9 +5,9 @@
     "ja": "Kangaroo 物理形状探索"
   },
   "summary": {
-    "zh": "用 Kangaroo 解算器做的找形 / 张力网研究；面向轻型张拉结构与膜的几何前期研究。",
-    "en": "Form-finding / tension-net research driven by the Kangaroo solver — preliminary geometry for light tensile and membrane systems.",
-    "ja": "Kangaroo ソルバーによる形状探索 / テンションネットの研究。軽量張力構造と膜のための幾何前段階の研究。"
+    "zh": "用 Kangaroo 解算器做找形和张力网。为后面轻型张拉结构与膜的几何打底。",
+    "en": "Form-finding and tension-net studies built with the Kangaroo solver. Sets up the geometry for light tensile and membrane systems.",
+    "ja": "Kangaroo ソルバーで形状探索とテンションネットを組む。軽量張力構造と膜の幾何の下地。"
   },
   "tags": [
     "kangaroo",

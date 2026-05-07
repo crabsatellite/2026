@@ -1,12 +1,12 @@
 {
   "title": {
     "zh": "音响 · Grasshopper 几何",
-    "en": "Acoustics — Grasshopper Geometry",
+    "en": "Acoustics, Grasshopper Geometry",
     "ja": "音響 · Grasshopper 形状研究"
   },
   "summary": {
-    "zh": "面向声学/音响装置的参数化几何研究。",
-    "en": "A parametric geometry study aimed at acoustic / loudspeaker enclosures.",
+    "zh": "为声学装置做的参数化几何研究。",
+    "en": "A parametric geometry study for acoustic enclosures.",
     "ja": "音響装置のためのパラメトリック幾何の研究。"
   },
   "tags": [

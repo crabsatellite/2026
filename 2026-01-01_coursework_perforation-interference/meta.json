@@ -5,9 +5,9 @@
     "ja": "開口干渉の研究"
   },
   "summary": {
-    "zh": "把表皮上的开洞看作一组互相干扰的场，参数化生成由密度场调制的开洞图样。",
-    "en": "Treats perforations on a façade as a field of mutually interfering attractors; parametric generation of openings modulated by a density field.",
-    "ja": "立面上の開口を相互に干渉する場の集まりと捉え、密度場によって変調された開口パターンをパラメトリックに生成する。"
+    "zh": "把立面上的开洞看作多个互相干扰的场。用密度场调制开洞的疏密。",
+    "en": "Reads perforations on a façade as overlapping attractor fields. A density field modulates how openings cluster or spread.",
+    "ja": "立面上の開口を、互いに干渉する複数の場として読む。密度場が開口の疎密を決める。"
   },
   "tags": [
     "facade",

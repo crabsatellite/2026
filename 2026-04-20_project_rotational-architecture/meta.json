@@ -5,9 +5,9 @@
     "ja": "回転建築の研究"
   },
   "summary": {
-    "zh": "围绕「回转」这一基本几何动作展开的形体生成与采光研究。",
-    "en": "Form-generation and daylighting studies built around the single geometric act of rotation.",
-    "ja": "「回転」という基本的な幾何動作をめぐる形態生成と採光の研究。"
+    "zh": "以「回转」作为基本动作，研究形体生成与采光。",
+    "en": "Form and daylight studies built around rotation as the basic move.",
+    "ja": "「回転」を基本動作にして、形態と採光を組み立てる。"
   },
   "tags": [
     "form-finding",
